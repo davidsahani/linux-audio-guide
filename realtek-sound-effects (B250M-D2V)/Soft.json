@@ -236,16 +236,36 @@
             },
             "split-channels": false
         },
-        "maximizer#0": {
+        "limiter#0": {
+            "alr": false,
+            "alr-attack": 5.0,
+            "alr-knee": 0.0,
+            "alr-knee-smooth": -5.0,
+            "alr-release": 50.0,
+            "attack": 5.0,
             "bypass": false,
-            "input-gain": 2.0,
-            "output-gain": 3.5,
-            "release": 70.0,
-            "threshold": -8.0
+            "dithering": "None",
+            "gain-boost": false,
+            "input-gain": 0.0,
+            "input-to-link": -80.01,
+            "input-to-sidechain": -80.01,
+            "link-to-input": -80.01,
+            "link-to-sidechain": -80.01,
+            "lookahead": 5.0,
+            "mode": "Herm Thin",
+            "output-gain": 0.0,
+            "oversampling": "True Peak/16 bit",
+            "release": 10.0,
+            "sidechain-preamp": 0.0,
+            "sidechain-to-input": -80.01,
+            "sidechain-to-link": -80.01,
+            "sidechain-type": "Internal",
+            "stereo-link": 100.0,
+            "threshold": -1.0
         },
         "plugins_order": [
             "equalizer#0",
-            "maximizer#0"
+            "limiter#0"
         ]
     }
 }
