@@ -1,0 +1,12 @@
+[Unit]
+Description=EasyEffects Change Priority Service
+After=user@1000.service
+Requires=user@1000.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/bash -c 'until pgrep -u $USER pipewire; do sleep 1; done'
+ExecStart=/home/david/.var/app/com.github.wwmm.easyeffects/easyeffects-change-priority.sh
+
+[Install]
+WantedBy=user@1000.service
