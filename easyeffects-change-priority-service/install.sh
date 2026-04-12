@@ -25,7 +25,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SERVICE_FILE="easyeffects-change-priority.service"
 SCRIPT_FILE="easyeffects-change-priority.sh"
 
-SCRIPT_DEST="$REAL_HOME/.var/app/com.github.wwmm.easyeffects/$SCRIPT_FILE"
+SCRIPT_DEST="/usr/local/bin/$SCRIPT_FILE"
 SERVICE_DEST="/etc/systemd/system/$SERVICE_FILE"
 
 echo "[>] Installing EasyEffects Change Priority Service"
@@ -39,7 +39,6 @@ echo "[*] Copying $SCRIPT_FILE -> $SCRIPT_DEST"
 mkdir -p "$(dirname "$SCRIPT_DEST")"
 cp "$SCRIPT_DIR/$SCRIPT_FILE" "$SCRIPT_DEST"
 chmod +x "$SCRIPT_DEST"
-chown "$REAL_USER:$REAL_USER" "$SCRIPT_DEST"
 
 # --- Edit and install the service file ---
 echo "[*] Installing $SERVICE_FILE -> $SERVICE_DEST"
