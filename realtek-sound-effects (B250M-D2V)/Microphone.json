@@ -58,7 +58,7 @@
         "gate#0": {
             "attack": 5.0,
             "bypass": false,
-            "curve-threshold": -24.0,
+            "curve-threshold": -20.0,
             "curve-zone": -6.0,
             "dry": -80.01,
             "hpf-frequency": 10.0,
